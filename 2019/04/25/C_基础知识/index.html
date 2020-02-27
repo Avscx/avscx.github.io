@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Aleo:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/寻鹿.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/寻鹿.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+
+
+
+  <meta name="keywords" content="C,Reverse,by-fishc,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="API(Application Programming Interface) – 应用程序编程接口 应用程序接口为：“计算机操作系统（Operating system）或程序库提供给应用程序调用使用的代码”。其主要目的是让应用程序开发人员得以调用一组例程功能，而无须考虑其底层的源代码为何、或理解其内部工作机制的细节。API本身是抽象的，它仅定义了一个接口，而不涉入应用程序如何实现的细节  Wind">
+<meta name="keywords" content="C,Reverse,by-fishc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C_基础知识">
+<meta property="og:url" content="http://yoursite.com/2019/04/25/C_基础知识/index.html">
+<meta property="og:site_name" content="_寻鹿&#39;s Blog">
+<meta property="og:description" content="API(Application Programming Interface) – 应用程序编程接口 应用程序接口为：“计算机操作系统（Operating system）或程序库提供给应用程序调用使用的代码”。其主要目的是让应用程序开发人员得以调用一组例程功能，而无须考虑其底层的源代码为何、或理解其内部工作机制的细节。API本身是抽象的，它仅定义了一个接口，而不涉入应用程序如何实现的细节  Wind">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-25T09:06:25.725Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C_基础知识">
+<meta name="twitter:description" content="API(Application Programming Interface) – 应用程序编程接口 应用程序接口为：“计算机操作系统（Operating system）或程序库提供给应用程序调用使用的代码”。其主要目的是让应用程序开发人员得以调用一组例程功能，而无须考虑其底层的源代码为何、或理解其内部工作机制的细节。API本身是抽象的，它仅定义了一个接口，而不涉入应用程序如何实现的细节  Wind">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/04/25/C_基础知识/">
+
+
+
+
+
+<link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
+  <title>C_基础知识 | _寻鹿's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">_寻鹿's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">野旷天低 江清月近</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/25/C_基础知识/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Avscx">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/tree.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="_寻鹿's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">C_基础知识</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-25T00:00:00+08:00">
+                2019-04-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C语言教程/" itemprop="url" rel="index">
+                    <span itemprop="name">C语言教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/25/C_基础知识/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/25/C_基础知识/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/04/25/C_基础知识/" class="leancloud_visitors" data-flag-title="C_基础知识">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Wordcount&#58;</span>
+                
+                <span title="Wordcount">
+                  2.2k
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="API-Application-Programming-Interface-–-应用程序编程接口"><a href="#API-Application-Programming-Interface-–-应用程序编程接口" class="headerlink" title="API(Application Programming Interface) – 应用程序编程接口"></a>API(Application Programming Interface) – 应用程序编程接口</h2><blockquote>
+<p>应用程序接口为：“计算机操作系统（Operating system）或程序库提供给应用程序调用使用的代码”。<br>其主要目的是让应用程序开发人员得以调用一组例程功能，而无须考虑其底层的源代码为何、或理解其内部工作机制的细节。<br>API本身是抽象的，它仅定义了一个接口，而不涉入应用程序如何实现的细节</p>
+</blockquote>
+<p>Windows 程序设计有两种方式： C语言方式（SDK）和 C++方式（对SDK函数进行包装，如VC中的MFC、BCB中的VCL）</p>
+<h2 id="SDK-Software-Development-Kit-–-软件开发工具包"><a href="#SDK-Software-Development-Kit-–-软件开发工具包" class="headerlink" title="SDK(Software Development Kit) – 软件开发工具包"></a>SDK(Software Development Kit) – 软件开发工具包</h2><p>一般是一些被软件工程师用于为特定的软件包、软件框架、硬件平台、操作系统等创建应用软件的开发工具的集合。<br>Windows SDK 编程简单的说就是使用 C 语言调用 Windows 提供的 API 函数的编程</p>
+<h2 id="MFC-Microsoft-Foundations-Classes-–-微软基础类"><a href="#MFC-Microsoft-Foundations-Classes-–-微软基础类" class="headerlink" title="MFC(Microsoft Foundations Classes) – 微软基础类"></a>MFC(Microsoft Foundations Classes) – 微软基础类</h2><p>MFC 是一个微软公司提供的类库（class libraries），以 C++ 类的形式封装了 Windows API，并且包含一个应用程序框架，以减少应用程序开发人员的工作量。<br>其中包含的类包含大量 Windows 句柄封装类和很多 Windows 的内建控件和组件的封装类。<br>简而言之，SDK 编程就是直接利用 Windows 提供的 API 函数进行编程，而 MFC 是利用类的概念对 API 函数进行封装，结合面向对象的继承、多态组成一个个类，共有一百多个类组成</p>
+<h2 id="为什么不推荐初学者学习-MFC？"><a href="#为什么不推荐初学者学习-MFC？" class="headerlink" title="为什么不推荐初学者学习 MFC？"></a>为什么不推荐初学者学习 MFC？</h2><p>微软千辛万苦封装了个 MFC，但很多资深程序员反而警告初学者不要去学习 MFC，这是为什么呢？<br>对于程序员来说，操作系统的功能完全是由 API 来定义。也就是说，操作系统若能够完成的事情，都会提供相应的 API 供调用。<br>因此，搞熟这些 API 对你理解 Windows 的运行机制非常有帮助。今后你无论使用什么来编写 Windows 程序，都是水到渠成。<br>API 函数本身就是进行了一层封装（例如上边我们提到的，我们根本不需要去理解如何在屏幕上显示字符串的原理），而 MFC 是再对 API 进行封装。<br>因此初学者如果直接学习 MFC 编程，就很难理解 Windows 的运行原理，而不理解原理的学习就会显得亦步亦趋。<br>反过来，如果当你首先掌握了这些 API 函数以及 Windows 的运行机制，你再来学习 MFC，学习就会变得事半功倍了！</p>
+<h2 id="stdcall，cdecl，pascal，fastcall"><a href="#stdcall，cdecl，pascal，fastcall" class="headerlink" title="stdcall，cdecl，pascal，fastcall"></a><strong>stdcall，</strong>cdecl，<strong>pascal，</strong>fastcall</h2><h3 id="cdecl"><a href="#cdecl" class="headerlink" title="__cdecl"></a>__cdecl</h3><p>__cdecl 是 C Declaration  的缩写，表示 C 语言默认的函数调用方法：所有参数从右到左依次入栈，这些参数由调用者清除，称为手动清栈。<br>被调用函数不会要求调用者传递多少参数，调用者传递过多或者过少的参数，甚至完全不同的参数都不会产生编译阶段的错误。</p>
+<h3 id="stdcall"><a href="#stdcall" class="headerlink" title="__stdcall"></a>__stdcall</h3><p>__stdcall 是 Standard Call 的缩写，是 C++ 的标准调用方式：所有参数从右到左依次入栈，如果是调用类成员的话，最后一个入栈的是 this 指针。<br>这些堆栈中的参数由被调用的函数在返回后清除，使用的指令是 retnX，X 表示参数占用的字节数，CPU 在 ret 之后自动弹出 X 个字节的堆栈空间，称为自动清栈。函数在编译的时候就必须确定参数个数，并且调用者必须严格的控制参数的生成，不能多，不能少，否则返回后会出错。</p>
+<h3 id="pascal"><a href="#pascal" class="headerlink" title="__pascal"></a>__pascal</h3><p><strong>pascal 是 Pascal 语言（Delphi）的函数调用方式，也可以在 C/C++ 中使用，参数压栈顺序与前两者相反。返回时的清栈方式与 </strong>stdcall 相同。</p>
+<h3 id="fastcall"><a href="#fastcall" class="headerlink" title="__fastcall"></a>__fastcall</h3><p><strong>fastcall 是编译器指定的快速调用方式。由于大多数的函数参数个数很少，使用堆栈传递比较费时。<br>因此 </strong>fastcall 通常规定将前两个（或若干个）参数由寄存器传递，其余参数还是通过堆栈传递。<br>不同编译器编译的程序规定的寄存器不同，返回方式和 __stdcall 相当。</p>
+<h3 id="thiscall"><a href="#thiscall" class="headerlink" title="__thiscall"></a>__thiscall</h3><p><strong>thiscall 是为了解决类成员调用中 this 指针传递而规定的。</strong>thiscall 要求把 this 指针放在特定寄存器中，该寄存器由编译器决定。<br>VC 使用 ecx，Borland 的 C++ 编译器使用 eax。返回方式和 __stdcall 相当。</p>
+<p><strong>fastcall 和 </strong>thiscall 涉及的寄存器由编译器决定，因此不能用作跨编译器的接口。所以 Windows 上的 COM 对象接口都定义为 <strong>stdcall 调用方式。<br>C 语言中不加说明默认函数为 </strong>cdecl 方式（C中也只能用这种方式），C++ 也一样，但是默认的调用方式可以在 IDE 环境中设置</p>
+<h2 id="宏定义和别名在-Windows-编程上的应用"><a href="#宏定义和别名在-Windows-编程上的应用" class="headerlink" title="宏定义和别名在 Windows 编程上的应用"></a>宏定义和别名在 Windows 编程上的应用</h2><p><a href="https://fishc.com.cn/thread-46645-1-1.html" target="_blank" rel="noopener">相关链接</a></p>
+<h2 id="static"><a href="#static" class="headerlink" title="static"></a>static</h2><p>static 的最主要功能是隐藏，其次因为 static 变量存放在静态存储区，所以它具备持久性和默认值 0<br><a href="https://fishc.com.cn/thread-46994-1-1.html" target="_blank" rel="noopener">相关链接</a></p>
+<h2 id="WNDCLASS-结构"><a href="#WNDCLASS-结构" class="headerlink" title="WNDCLASS 结构"></a>WNDCLASS 结构</h2><p>Windows 的窗口总是基于窗口类来创建的，窗口类同时确定了处理窗口消息的窗口过程(<strong>回调函数</strong>)<br>在创建应用程序窗口之前，必须调用 RegisterClass 函数来注册窗口类。该函数只需要一个参数，即指向 WNDCLASS 窗口类的指针。<br>因为 WNDCLASS 类包含了窗口所拥有的基本属性。</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">typedef struct tagWNDCLASSW &#123;</span><br><span class="line">    UINT        style<span class="comment">;</span></span><br><span class="line">    WNDPROC     lpfnWndProc<span class="comment">;</span></span><br><span class="line">    int         cbClsExtra<span class="comment">;</span></span><br><span class="line">    int         cbWndExtra<span class="comment">;</span></span><br><span class="line">    HINSTANCE   hInstance<span class="comment">;</span></span><br><span class="line">    HICON       hIcon<span class="comment">;</span></span><br><span class="line">    HCURSOR     hCursor<span class="comment">;</span></span><br><span class="line">    HBRUSH      hbrBackground<span class="comment">;</span></span><br><span class="line">    LPCWSTR     lpszMenuName<span class="comment">;</span></span><br><span class="line">    LPCWSTR     lpszClassName<span class="comment">;</span></span><br><span class="line">&#125; WNDCLASSW, *PWNDCLASSW, NEAR *NPWNDCLASSW, FAR *LPWNDCLASSW<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<h3 id="成员解析"><a href="#成员解析" class="headerlink" title="成员解析"></a>成员解析</h3><table>
+<thead>
+<tr>
+<th>成员</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>style</td>
+<td>指定窗口类型，各种“类风格”（详见下方↓）可以使用按位或操作符组合起来</td>
+</tr>
+<tr>
+<td>lpfnWndProc</td>
+<td>指定窗口过程（必须是<strong>回调函数</strong>）</td>
+</tr>
+<tr>
+<td>cbClsExtra</td>
+<td>预留的额外空间，一般为 0</td>
+</tr>
+<tr>
+<td>cbWndExtra</td>
+<td>预留的额外空间，一般为 0</td>
+</tr>
+<tr>
+<td>hInstance</td>
+<td>应用程序的实例句柄</td>
+</tr>
+<tr>
+<td>hIcon</td>
+<td>为所有基于该窗口类的窗口设定一个图标</td>
+</tr>
+<tr>
+<td>hCursor</td>
+<td>为所有基于该窗口类的窗口设定一个鼠标指针</td>
+</tr>
+<tr>
+<td>hbrBackground</td>
+<td>指定窗口背景色</td>
+</tr>
+<tr>
+<td>lpszMenuName</td>
+<td>指定窗口菜单</td>
+</tr>
+<tr>
+<td>lpszClassName</td>
+<td>指定窗口类名</td>
+</tr>
+</tbody>
+</table>
+<h3 id="style类风格"><a href="#style类风格" class="headerlink" title="style类风格"></a>style类风格</h3><table>
+<thead>
+<tr>
+<th>类风格</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CS_VREDRAW</td>
+<td>移动或者调整窗口的高度（垂直方向）时，重绘整个窗口</td>
+</tr>
+<tr>
+<td>CS_HREDRAW</td>
+<td>移动或者调整窗口的宽度（水平方向）时，重绘整个窗口</td>
+</tr>
+<tr>
+<td>CS_DBLCLKS</td>
+<td>当用户光标在窗口内双击时，允许发送双击消息给窗口过程</td>
+</tr>
+<tr>
+<td>CS_OWNDC</td>
+<td>给予每个窗口实例分配一个唯一的 DC（注意，尽管这样是很方便，但它必须慎重使用，因为每个DC大约要占800个字节的内存）</td>
+</tr>
+<tr>
+<td>CS_CLASSDC</td>
+<td>该窗口类的所有窗口实例都共享一个窗口类 DC</td>
+</tr>
+<tr>
+<td>CS_PARENTDC</td>
+<td>1.将子窗口的裁剪区域设置到父窗口的 DC 中去，这样子窗口便可以在父窗口上绘制自身。（注意，这是子窗口从系统缓存中获取 DC，而不是使用父窗口的 DC。）</td>
+</tr>
+<tr>
+<td>—</td>
+<td>2.指定该风格可以提高系统性能</td>
+</tr>
+<tr>
+<td>CS_NOCLOSE</td>
+<td>禁止系统菜单的关闭选项</td>
+</tr>
+<tr>
+<td>CS_SAVEBITS</td>
+<td>1.以位图形式保存被该窗口遮挡的屏幕部分，当给窗口移动以后，系统便可以用该保存的位图恢复屏幕移动的相应部分，从而系统不用向被该窗口遮挡的窗口发送 WM_PAINT 消息</td>
+</tr>
+<tr>
+<td>—</td>
+<td>2.该特性对于菜单类型的窗口比较合适，因为它通常是简短的显示一下之后便消失</td>
+</tr>
+<tr>
+<td>—</td>
+<td>3.设置该特性将增加显示该窗口的时间，因为它通常要先分配保存位图的内存</td>
+</tr>
+<tr>
+<td>CS_BYTEALIGNCLIENT</td>
+<td>在字节边界上（在 x 方向上）定位窗口的用户区域的位置</td>
+</tr>
+<tr>
+<td>CS_BYTEALIGNWINDOW</td>
+<td>在字节边界上（在 x 方向上）定位窗口的位置</td>
+</tr>
+<tr>
+<td>CS_GLOBALCLASS</td>
+<td>1.当调用 CreateWindow 或 CreateWindowEx 函数来创建窗口时允许它的 hInstance 参数和注册窗口类时传递给 RegisterClass 的 hInstance 参数不同</td>
+</tr>
+<tr>
+<td>—</td>
+<td>2.如果不指定该风格，则这两个 hInstance 必须相同</td>
+</tr>
+</tbody>
+</table>
+<h2 id="大写标识符"><a href="#大写标识符" class="headerlink" title="大写标识符"></a>大写标识符</h2><p>在 Winodows 的定义中包含着许多大写标识符，这些标识符有很多都是以两个或三个字母作为前缀，且其后紧跟一个下划线：</p>
+<p>CS_HREDRAW<br>DT_VCENTER<br>SND_FILENAME<br>CS_VREDRAW<br>IDC_ARROW<br>WM_CREATE<br>CW_USEDEFAULT<br>IDI_APPLICATION<br>WM_DESTROY<br>DT_CENTER<br>MB_ICONERROR<br>WM_PAINT<br>DT_SINGLELINE<br>SND_ASYNC<br>WS_OVERLAPPEDWINDOW</p>
+<p>这些标识符其实都是宏定义，前缀标明该常量所属的一般类别，含义如下:</p>
+<table>
+<thead>
+<tr>
+<th>前缀</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CS</td>
+<td>类风格选项（ClassStyle）</td>
+</tr>
+<tr>
+<td><strong>CW</strong></td>
+<td>创建窗口选项（CreateWindow）</td>
+</tr>
+<tr>
+<td>DT</td>
+<td>文本绘制选项（DrawText）</td>
+</tr>
+<tr>
+<td>IDI</td>
+<td>图标的 ID 号（IDIcon）</td>
+</tr>
+<tr>
+<td>IDC</td>
+<td>光标的 ID 号（IDCursor）</td>
+</tr>
+<tr>
+<td>MB</td>
+<td>消息框选项（MessageBox）</td>
+</tr>
+<tr>
+<td>SND</td>
+<td>声音选项（Sound）</td>
+</tr>
+<tr>
+<td>WM</td>
+<td>窗口消息（WindowsMessage）</td>
+</tr>
+<tr>
+<td>WS</td>
+<td>窗口风格（WindowStyles）</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+    
+<div style="text-align:center;color: #FFE7BA;font-size:14px;">
+	------ The End <i class="fa fa-paw"></i>Thanks ------</div>
+
+      </div>
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i>C</a>
+          
+            <a href="/tags/Reverse/" rel="tag"><i class="fa fa-tag"></i>Reverse</a>
+          
+            <a href="/tags/by-fishc/" rel="tag"><i class="fa fa-tag"></i>by-fishc</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/16/西湖论剑_CTF-Notes/" rel="next" title="西湖论剑_CTF-Notes">
+                <i class="fa fa-chevron-left"></i> 西湖论剑_CTF-Notes
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/tree.jpg" alt="Avscx">
+            
+              <p class="site-author-name" itemprop="name">Avscx</p>
+              <p class="site-description motion-element" itemprop="description">Whale-Fall</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">Notes</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">Categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">Tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#API-Application-Programming-Interface-–-应用程序编程接口"><span class="nav-number">1.</span> <span class="nav-text">API(Application Programming Interface) – 应用程序编程接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SDK-Software-Development-Kit-–-软件开发工具包"><span class="nav-number">2.</span> <span class="nav-text">SDK(Software Development Kit) – 软件开发工具包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MFC-Microsoft-Foundations-Classes-–-微软基础类"><span class="nav-number">3.</span> <span class="nav-text">MFC(Microsoft Foundations Classes) – 微软基础类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么不推荐初学者学习-MFC？"><span class="nav-number">4.</span> <span class="nav-text">为什么不推荐初学者学习 MFC？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stdcall，cdecl，pascal，fastcall"><span class="nav-number">5.</span> <span class="nav-text">stdcall，cdecl，pascal，fastcall</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cdecl"><span class="nav-number">5.1.</span> <span class="nav-text">__cdecl</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stdcall"><span class="nav-number">5.2.</span> <span class="nav-text">__stdcall</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pascal"><span class="nav-number">5.3.</span> <span class="nav-text">__pascal</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fastcall"><span class="nav-number">5.4.</span> <span class="nav-text">__fastcall</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#thiscall"><span class="nav-number">5.5.</span> <span class="nav-text">__thiscall</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#宏定义和别名在-Windows-编程上的应用"><span class="nav-number">6.</span> <span class="nav-text">宏定义和别名在 Windows 编程上的应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#static"><span class="nav-number">7.</span> <span class="nav-text">static</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WNDCLASS-结构"><span class="nav-number">8.</span> <span class="nav-text">WNDCLASS 结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#成员解析"><span class="nav-number">8.1.</span> <span class="nav-text">成员解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#style类风格"><span class="nav-number">8.2.</span> <span class="nav-text">style类风格</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#大写标识符"><span class="nav-number">9.</span> <span class="nav-text">大写标识符</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Avscx</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">8.5k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'aH2wwfdfxbQfb5r4n578MKK1-gzGzoHsz',
+        appKey: 'd4M9xBlfcsWQOdLKIpVQ4G8J',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("aH2wwfdfxbQfb5r4n578MKK1-gzGzoHsz", "d4M9xBlfcsWQOdLKIpVQ4G8J");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
